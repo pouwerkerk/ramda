@@ -8199,6 +8199,17 @@
     var union = _curry2(compose(uniq, _concat));
 
     var R = {
+        I: identity,
+        eq: equals,
+        mixin: merge,
+        createMapEntry: objOf,
+        foldl: reduce,
+        mapAccumL: mapAccum,
+        mapObj: map,
+        charAt: nth,
+        rPartial: partialRight,
+        substringFrom: drop,
+        mapIndexed: addIndex,
         F: F,
         T: T,
         __: __,
