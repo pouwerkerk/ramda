@@ -8201,8 +8201,7 @@
     var appendTo = function(xs) { return append(__, xs) };
     var prependTo = function(xs) { return prepend(__, xs) };
 
-    var pathAsStrOrArr = R.curryN(2, function(p, obj)
-    {
+    var pathAsStrOrArr = _curry2(function(p, obj) {
         if (typeof p === "string") {
             return path(p.split('.'), obj);
         }
