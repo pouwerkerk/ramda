@@ -8201,6 +8201,13 @@
     var appendTo = function(xs) { return append(__, xs) };
     var prependTo = function(xs) { return prepend(__, xs) };
 
+    var fakePath = R.curryN(2, function(p, obj)
+    {
+        if (typeof p === "string") {
+            return path(p.split('.'), obj);
+        }
+    }
+
     var R = {
         appendTo: appendTo,
         arity: curryN,
@@ -8233,6 +8240,7 @@
         substringFrom: drop,
         substringTo: take,
         unfoldr: unfold,
+        path: fakePath,
 
         charCodeAt: undefined, // nthCharCode
         foldlIndexed: undefined, // reduceIndexed,
@@ -8391,7 +8399,6 @@
         partial: partial,
         partialRight: partialRight,
         partition: partition,
-        path: path,
         pathEq: pathEq,
         pathOr: pathOr,
         pathSatisfies: pathSatisfies,
