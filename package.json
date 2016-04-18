@@ -22,7 +22,7 @@
       "web": "https://github.com/megawac"
     }
   ],
-  "name": "ramda",
+  "name": "ramdaf",
   "description": "A practical functional library for JavaScript programmers.",
   "version": "0.19.1",
   "homepage": "http://ramdajs.com/",
