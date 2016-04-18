@@ -8227,7 +8227,7 @@
         mapAccumL: mapAccum,
         mapAccumR: mapAccumRight,
         mapIndexed: addIndex,
-        mapObj: map,
+        mapObj: mapObjIndexed,
         mixin: merge,
         pCompose: composeP,
         pPipe: pipeP,
