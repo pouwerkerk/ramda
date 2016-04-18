@@ -8198,63 +8198,7 @@
      */
     var union = _curry2(compose(uniq, _concat));
 
-    var appendTo = function(xs) { return append(__, xs) };
-    var prependTo = function(xs) { return prepend(__, xs) };
-
-    var pathAsStrOrArr = _curry2(function(p, obj) {
-        if (typeof p === "string") {
-            return path(p.split('.'), obj);
-        }
-
-        return path(p, obj);
-    });
-
     var R = {
-        appendTo: appendTo,
-        arity: curryN,
-        charAt: nth,
-        containsWith: any, // not exactly
-        createMapEntry: objOf,
-        eq: equals,
-        eqDeep: equals,
-        filterIndexed: addIndex(filter),
-        foldl: reduce,
-        foldr: reduceRight,
-        forEachIndexed: addIndex(forEach),
-        I: identity,
-        isSet: allUniq,
-        lPartial: partial,
-        mapAccumL: mapAccum,
-        mapAccumR: mapAccumRight,
-        mapIndexed: addIndex,
-        mapObj: mapObjIndexed,
-        mixin: merge,
-        pCompose: composeP,
-        pPipe: pipeP,
-        prependTo: prependTo,
-        rejectIndexed: addIndex(reject),
-        rPartial: partialRight,
-        scanl: scan,
-        strIndexOf: indexOf,
-        strLastIndexOf: lastIndexOf,
-        substring: slice,
-        substringFrom: drop,
-        substringTo: take,
-        unfoldr: unfold,
-        path: pathAsStrOrArr,
-
-        charCodeAt: undefined, // nthCharCode
-        foldlIndexed: undefined, // reduceIndexed,
-        foldrIndexed: undefined, // reduceRightIndexed
-        func: undefined,
-        functions: undefined,
-        functionsIn: undefined,
-        get: undefined,
-        installTo: undefined,
-        op: undefined,
-        pathOn: undefined,
-        propOf: undefined,
-
         F: F,
         T: T,
         __: __,
@@ -8400,6 +8344,7 @@
         partial: partial,
         partialRight: partialRight,
         partition: partition,
+        path: path,
         pathEq: pathEq,
         pathOr: pathOr,
         pathSatisfies: pathSatisfies,
